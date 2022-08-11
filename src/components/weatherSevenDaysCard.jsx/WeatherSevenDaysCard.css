@@ -1,0 +1,25 @@
+.weatherSevenDaysCard {
+    /* display: flex; */
+    align-items: center;
+    margin-top: 54px;
+}
+
+.weatherSevenDaysCard img {
+    Width: 10.12px;
+    Height: 17.41px;
+}
+
+.weatherSevenDaysCard-arrow-left {
+    margin-left: 25px;
+    margin-right: 10px;
+}
+.weatherSevenDaysCard-arrow-right {
+    margin-right: 25px;
+    margin-left: 10px;
+}
+
+.weatherSevenDaysCard_content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}

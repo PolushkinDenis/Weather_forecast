@@ -1,0 +1,57 @@
+.weatherSevenDays-main {
+    position: absolute;
+    width: 660px;
+    height: 524px;
+    margin-left: 41px;
+    margin-top: 337px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(4, 5, 73, 0.25), 14px 14px 20px rgba(5, 6, 114, 0.2);
+    border-radius: 8px;
+}
+
+.weatherSevenDays-selector {
+    padding-top: 50px;
+    margin-left: 58px;
+}
+
+.weatherSevenDays-selector_text {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 32px;
+    color: #2C2D76;
+}
+
+.weatherSevenDays-main select {
+    margin-top: 32px;
+    width: 252px;
+    height: 48px;
+    box-sizing: border-box;
+    background: rgba(128, 131, 164, 0.06);
+    border: 2px solid rgba(128, 131, 164, 0.2);
+    border-radius: 8px;
+}
+
+.weatherSevenDays-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.weatherSevenDays-empty img {
+    width: 160px;
+    height: 160px;
+}
+
+.weatherSevenDays-empty_text {
+    margin-top: 28px;
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #8083A4;
+}

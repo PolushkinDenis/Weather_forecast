@@ -1,8 +1,12 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
+  height: 1094px;
+  background-image: url('./images/fon1.png'), url('./images/fon2.png');
+  background-position: bottom left, top right;
+  background-repeat: no-repeat;
 }
 
-.App-logo {
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -35,4 +39,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
