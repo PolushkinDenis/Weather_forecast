@@ -4,13 +4,12 @@ import { useTypedSelector } from "../../hooks/useTypedSelector";
 import './WeatherSevenDays.css'
 import { fetchWeather } from '../../action-creators/weather'
 import WeatherSevenDaysCard from "../weatherSevenDaysCard.jsx/WeatherSevenDaysCard";
-import imptyImg from '../../images/empty.png'
+import EmptyWeather from "../emptyWeather/EmptyWeather";
 
 const WeatherSevenDays = () => {
 
     const dispatch: Dispatch<any> = useDispatch()
     const { loading, error, weather } = useTypedSelector(state => state.weather)
-    console.log(weather)
     const [selectCity, setSelectCity] = useState('')
 
     const cityData = [
@@ -23,7 +22,7 @@ const WeatherSevenDays = () => {
 
     const fetchWeathers = (e: React.ChangeEvent<HTMLSelectElement>) => {
         setSelectCity(e.target.value)
-        dispatch(fetchWeather(e.target.value))
+        dispatch(fetchWeather(e.target.value.split(",")))
     }
 
     return (
@@ -33,20 +32,15 @@ const WeatherSevenDays = () => {
                 <select value={selectCity} onChange={e => fetchWeathers(e)}>
                     <option value={''} disabled>Select city</option>
                     {cityData.map((city) =>
-                        <option key={city.city}>{city.city}</option>
+                        <option key={city.city} value={[city.lat, city.lon]}>{city.city}</option>
                     )}
                 </select>
             </div>
             <div>
-                { weather.data?.length > 0 ? (<WeatherSevenDaysCard weather={weather}/>) : (
-                    <div className="weatherSevenDays-empty">
-                        <img src={imptyImg}></img>
-                        <div className="weatherSevenDays-empty_text">Fill in all the fields and the weather will be displayed</div>
-                    </div>
+                {weather.data?.length > 0 ? (<WeatherSevenDaysCard weather={weather} />) : (
+                    <EmptyWeather />
                 )}
             </div>
-
-
         </div>
     )
 }
