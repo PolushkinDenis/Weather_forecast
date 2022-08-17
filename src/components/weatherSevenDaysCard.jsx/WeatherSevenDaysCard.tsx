@@ -6,12 +6,11 @@ import WeatherSevenDaysCardItem from '../weatherSevenDaysCardItem/WeatherSevenDa
 import leftArrow from '../../images/left.png'
 import rightArrow from '../../images/right.png'
 
-
 interface WeatherSevenDaysCardState {
     weather: ICurrentDays
 }
 
-const WeatherSevenDaysCard: FC<WeatherSevenDaysCardState> = ({ weather }) => {
+const WeatherSevenDaysCard: FC<WeatherSevenDaysCardState> = ({weather}) => {
 
     const [weatherDay, setWeatherDay] = useState<IWeatherDays[]>(weather.data)
     const [weatherThreeDays, setWeatherThreeDays] = useState<IWeatherDays[]>([])

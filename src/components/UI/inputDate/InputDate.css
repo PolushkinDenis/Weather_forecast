@@ -1,0 +1,8 @@
+.inputDate {
+    width: 252px;
+    height: 48px;
+    background: rgba(128, 131, 164, 0.06);    
+    border: 2px solid rgba(128, 131, 164, 0.2);
+    border-radius: 8px;
+
+}
