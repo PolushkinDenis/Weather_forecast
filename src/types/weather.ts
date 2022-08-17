@@ -6,14 +6,18 @@ export interface WeatherState {
 }
 
 export enum WeatherActionTypes {
-    FETCH_WEATHER = "FETCH_WEATHER",
+    FETCH_WEATHER_7DAYS = "FETCH_WEATHER_7DAYS",
+    FETCH_WEATHER_PAST = "FETCH_WEATHER_PAST",
     FETCH_WEATHER_7DAYS_SUCCESS = "FETCH_WEATHER_7DAYS_SUCCESS",
     FETCH_WEATHER_PAST_SUCCESS = "FETCH_WEATHER_PAST_SUCCESS",
     FETCH_WEATHER_ERROR = "FETCH_WEATHER_ERROR"
 }
 
-interface FetchWeatherAction {
-    type: WeatherActionTypes.FETCH_WEATHER
+interface FetchWeatherAction7Days {
+    type: WeatherActionTypes.FETCH_WEATHER_7DAYS
+}
+interface FetchWeatherActionPast {
+    type: WeatherActionTypes.FETCH_WEATHER_PAST
 }
 interface FetchWeather7DaysSuccessAction {
     type: WeatherActionTypes.FETCH_WEATHER_7DAYS_SUCCESS,
@@ -28,7 +32,7 @@ interface FetchWeatherErorAction {
     payload: string
 }
 
-export type WeatherAction = FetchWeatherAction | FetchWeather7DaysSuccessAction | FetchWeatherPastSuccessAction | FetchWeatherErorAction
+export type WeatherAction = FetchWeatherAction7Days | FetchWeatherActionPast | FetchWeather7DaysSuccessAction | FetchWeatherPastSuccessAction | FetchWeatherErorAction
 
 export type Weather = {
     temp: {

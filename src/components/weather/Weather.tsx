@@ -14,7 +14,9 @@ const Weather: FC = () => {
     const { weather7Days, weatherPast } = useTypedSelector(state => state.weather)
 
     useEffect(() => {
+        console.log("DDD")
         if (parameters.city7Days[0].length > 0) {
+            console.log("dfff")
             dispatch(fetchWeather7Days(parameters.city7Days))
         }
     }, [parameters.city7Days])
@@ -24,6 +26,8 @@ const Weather: FC = () => {
             dispatch(fetchWeatherPast(parameters.cityPast, parameters.date))
         }
     }, [parameters.date, parameters.cityPast])
+
+    console.log(weather7Days)
 
     return (
         <div className="weather">
